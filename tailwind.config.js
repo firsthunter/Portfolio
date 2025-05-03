@@ -73,8 +73,13 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        modalEntry: 'modalEntry 0.2s ease-out'
-      }
+        modalEntry: 'modalEntry 0.2s ease-out',
+        'spin-slow': 'spin 6s linear infinite',
+        'float': 'float 6s ease-in-out infinite',
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
     }
   },
   plugins: [require("tailwindcss-animate")],
