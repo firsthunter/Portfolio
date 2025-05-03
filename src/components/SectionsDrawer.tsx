@@ -9,7 +9,6 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { AnimatedPhone } from "./AnimatedPhone";
 
 const sections = [
   { name: "Home", id: "hero" },
@@ -27,7 +26,7 @@ export function SectionsDrawer() {
 
   return (
     <>
-      <AnimatedPhone />
+      
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" className="fixed top-4 left-4 z-50">
