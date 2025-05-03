@@ -1,21 +1,50 @@
-import { personalInfo } from '../data/personalInfo';
+'use client';
+
+import { personalInfo } from '@/data/personalInfo';
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="relative py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 via-white/40 to-purple-50/80 
-        dark:from-gray-900/80 dark:via-gray-900/40 dark:to-blue-900/80 animate-gradient"></div>
-      <div className="max-w-4xl mx-auto px-8 relative">
-        <h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r 
-          from-blue-500 to-purple-500 animate-gradient">About Me</h2>
-        <div className="backdrop-blur-sm bg-white/30 dark:bg-black/30 p-8 rounded-2xl 
-          border border-white/20 dark:border-white/10 shadow-xl transition-all duration-300
-          hover:shadow-purple-500/10 dark:hover:shadow-purple-500/5">
-          <p className="text-gray-700 dark:text-gray-200 leading-relaxed animate-fadeIn">
-            {personalInfo.profile}
-          </p>
-        </div>
+    <motion.section 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="container mx-auto px-4 py-20"
+    >
+      <div className="max-w-4xl mx-auto">
+        <motion.h2 
+          initial={{ y: 20 }}
+          whileInView={{ y: 0 }}
+          className="text-3xl md:text-4xl font-bold text-center mb-8"
+        >
+          About Me
+        </motion.h2>
+        <motion.p 
+          initial={{ y: 20 }}
+          whileInView={{ y: 0 }}
+          className="text-lg text-muted-foreground leading-relaxed"
+        >
+          {personalInfo.profile}
+        </motion.p>
+        <motion.div 
+          initial={{ y: 20 }}
+          whileInView={{ y: 0 }}
+          className="mt-8 flex flex-wrap gap-4 justify-center"
+        >
+          <div className="flex items-center gap-2">
+            <span className="font-medium">Email:</span>
+            <a href={`mailto:${personalInfo.email}`} className="text-primary hover:underline">
+              {personalInfo.email}
+            </a>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="font-medium">Phone:</span>
+            <a href={`tel:${personalInfo.phone}`} className="text-primary hover:underline">
+              {personalInfo.phone}
+            </a>
+          </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

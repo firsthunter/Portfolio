@@ -1,39 +1,74 @@
-import { personalInfo } from '../data/personalInfo';
-import AnimatedBackground from './AnimatedBackground';
+'use client';
+
+import { personalInfo } from '@/data/personalInfo';
+import { motion } from "framer-motion";
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center p-8 overflow-hidden">
-      <AnimatedBackground />
-      <div className="max-w-4xl relative animate-fadeIn backdrop-blur-sm bg-white/10 dark:bg-black/10 p-12 rounded-2xl border border-white/20">
-        <h1 className="text-5xl sm:text-7xl font-bold mb-6 relative">
-          Hi, I'm{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient animate-glow">
-            {personalInfo.name}
-          </span>
-          <div className="absolute -top-8 -right-8 w-16 h-16 rounded-full border-4 border-blue-500 animate-spin-slow opacity-20"></div>
+    <div className="flex flex-col items-center justify-center h-screen relative overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center z-10"
+      >
+        <h1 className="text-4xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          Hi, I&apos;m {personalInfo.name}
         </h1>
-        <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-slideUp relative">
-          {personalInfo.title}
-          <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 animate-shine"></span>
-        </p>
-        <div className="flex gap-4 animate-slideUp animation-delay-200">
-          <a
-            href="#contact"
-            className="rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white px-8 py-4 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 relative overflow-hidden group"
-          >
-            <span className="relative z-10">Contact Me</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          </a>
-          <a
-            href="#projects"
-            className="rounded-full border-2 border-blue-500 text-blue-500 px-8 py-4 hover:scale-105 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 relative overflow-hidden group"
-          >
-            <span className="relative z-10">View Projects</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          </a>
+        <div className="h-[40px] sm:h-[48px]">
+          <TypeAnimation
+            sequence={[
+              personalInfo.title,
+              2000,
+              'Problem Solver',
+              2000,
+              'Tech Innovator',
+              2000,
+            ]}
+            wrapper="span"
+            speed={50}
+            style={{ display: 'inline-block' }}
+            className="text-2xl sm:text-3xl text-muted-foreground"
+            repeat={Infinity}
+          />
         </div>
-      </div>
-    </section>
-  );
+        <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
+          {'iOS Developer | Mobile Innovator '}
+        </p>
+        <motion.div className="flex gap-4 justify-center mt-8">
+          <motion.a
+            href={personalInfo.social.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:shadow-xl transition-all"
+          >
+            GitHub
+          </motion.a>
+          <motion.a
+            href={personalInfo.social.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 bg-secondary text-secondary-foreground rounded-full font-medium hover:shadow-xl transition-all"
+          >
+            LinkedIn
+          </motion.a>
+        </motion.div>
+      </motion.div>
+      
+      <motion.div
+        className="absolute inset-0 -z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20" />
+        <div className="absolute inset-0 bg-grid-white/20" />
+      </motion.div>
+    </div>
+  )
 }

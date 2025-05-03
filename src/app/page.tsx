@@ -13,12 +13,12 @@ export default function Home() {
       <ThemeToggle />
       <SectionsDrawer />
       <ScrollArea className="h-screen w-full">
-        <div className="min-h-screen bg-background transition-colors duration-300">
-          <div id="hero"><Hero /></div>
-          <div id="about"><About /></div>
-          <div id="skills"><Skills /></div>
-          <div id="projects"><Projects /></div>
-          <div id="contact"><Contact /></div>
+        <div className="min-h-screen bg-background transition-all duration-500 ease-in-out">
+          <div id="hero" className="min-h-screen"><Hero /></div>
+          <div id="about" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"><About /></div>
+          <div id="skills" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-muted/30"><Skills /></div>
+          <div id="projects" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"><Projects /></div>
+          <div id="contact" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-muted/30"><Contact /></div>
         </div>
       </ScrollArea>
     </main>
