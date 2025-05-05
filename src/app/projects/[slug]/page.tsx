@@ -7,11 +7,11 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function ProjectPage({
-  params,
-}: {
+type Props = {
   params: { slug: string }
-}) {
+}
+
+export default function ProjectPage({ params }: Props) {
   const project = personalInfo.projects.find(
     (p) => p.title.toLowerCase().replace(/\s+/g, '-') === params.slug
   );
