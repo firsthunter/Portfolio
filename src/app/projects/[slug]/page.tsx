@@ -7,14 +7,13 @@ export function generateStaticParams() {
   }));
 }
 
-type Props = {
-  params: Promise<{ slug: string }> | { slug: string }
-}
-
-export default async function ProjectPage({ params }: Props) {
-  const { slug } = await (Promise.resolve(params));
+export default function ProjectPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
   const project = personalInfo.projects.find(
-    (p) => p.title.toLowerCase().replace(/\s+/g, '-') === slug
+    (p) => p.title.toLowerCase().replace(/\s+/g, '-') === params.slug
   );
 
   if (!project) {
