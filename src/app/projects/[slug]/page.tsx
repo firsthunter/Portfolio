@@ -1,16 +1,22 @@
 import { personalInfo } from "@/data/personalInfo";
 import { notFound } from "next/navigation";
 
+// Add static paths generation
+export function generateStaticParams() {
+  return personalInfo.projects.map((project) => ({
+    slug: project.title.toLowerCase().replace(/\s+/g, '-'),
+  }));
+}
+
 interface PageProps {
-  params: Promise<{
+  params: {
     slug: string;
-  }>; // Adjusted to match the expected type
+  };
 }
 
 export default async function ProjectPage({ params }: PageProps) {
-  const resolvedParams = await params; // Await the promise to get the actual object
   const project = personalInfo.projects.find(
-    (p) => p.title.toLowerCase().replace(/\s+/g, '-') === resolvedParams.slug
+    (p) => p.title.toLowerCase().replace(/\s+/g, '-') === params.slug
   );
 
   if (!project) {
