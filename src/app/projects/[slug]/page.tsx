@@ -1,7 +1,13 @@
 import { personalInfo } from "@/data/personalInfo";
 import { notFound } from "next/navigation";
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function ProjectPage({ params }: PageProps) {
   const project = personalInfo.projects.find(
     (p) => p.title.toLowerCase().replace(/\s+/g, '-') === params.slug
   );
