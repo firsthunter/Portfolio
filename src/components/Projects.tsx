@@ -2,6 +2,7 @@
 
 import { personalInfo } from "@/data/personalInfo";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Projects() {
@@ -27,7 +28,12 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-card p-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
             >
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+              <Link 
+                href={`/projects/${project.title.toLowerCase().replace(/\s+/g, '-')}`}
+                className="inline-block hover:text-primary transition-colors"
+              >
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+              </Link>
               <p className="text-muted-foreground mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (

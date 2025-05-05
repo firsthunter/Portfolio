@@ -1,6 +1,5 @@
 # Personal Portfolio
 
-
 ## 📋 Overview
 
 This portfolio showcases my work, skills, and experience as a developer. It features a clean, modern design with smooth animations and a focus on user experience. Visitors can explore my projects, read about my technical expertise, and get in touch through the contact section.
