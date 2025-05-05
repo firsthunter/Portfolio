@@ -8,12 +8,13 @@ export function generateStaticParams() {
 }
 
 type Props = {
-  params: { slug: string }
+  params: Promise<{ slug: string }> | { slug: string }
 }
 
-export default function ProjectPage({ params }: Props) {
+export default async function ProjectPage({ params }: Props) {
+  const { slug } = await (Promise.resolve(params));
   const project = personalInfo.projects.find(
-    (p) => p.title.toLowerCase().replace(/\s+/g, '-') === params.slug
+    (p) => p.title.toLowerCase().replace(/\s+/g, '-') === slug
   );
 
   if (!project) {
