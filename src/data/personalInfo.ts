@@ -5,8 +5,8 @@ export const personalInfo = {
     phone: "+216 28 111 530",
     profile: "iOS Developer | Mobile Innovator leveraging Swift, SwiftUI, and backend systems to engineer user-centric interfaces. Committed to pioneering mobile solutions in agile tech ecosystems while refining skills in scalable frameworks and emerging tools.",
     social: {
-      github: "https://github.com/firsthunter", // Replace with your actual GitHub URL
-      linkedin: "https://www.linkedin.com/in/iheb-ben-dhaou", // Replace with your actual LinkedIn URL
+      github: "https://github.com/firsthunter",
+      linkedin: "https://www.linkedin.com/in/iheb-ben-dhaou", 
     },
     skills: [
       "Swift",
