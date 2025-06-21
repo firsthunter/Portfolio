@@ -42,7 +42,8 @@ export const personalInfo = {
         "Delivered a functional prototype that successfully detected hearing issues, demonstrating the potential to improve accessibility to hearing health diagnostics."
         ],
           link: "#",
-        technologies: ["Swift", "Core ML", "SwiftUI/UIKit"]
+        technologies: ["Swift", "Core ML", "SwiftUI/UIKit"],
+        snapshot : '/purehear.png'
       },
       {
         title: "AgroAI",
@@ -55,7 +56,9 @@ export const personalInfo = {
     "Integrated advanced features, including a chatbot for user support, real-time weather insights, and a community forum for user interaction and knowledge sharing."
         ],
           link: "#",
-        technologies: ["Swift", "Kotlin", "MongoDB", "AR", "AI"]
+        technologies: ["Swift", "Kotlin", "MongoDB", "AR", "AI"],
+        snapshot : '/agroAi1.png'
+
       },
       {
         title: "BudgetMaster",
@@ -68,7 +71,9 @@ export const personalInfo = {
     "Delivered a user-friendly platform with visualizations (charts/graphs) and community features (forums, expert advice) to enhance engagement and financial knowledge."
 ],
           link: "#",
-        technologies: ["Swift", "Charts/Graphs", "Gamification"]
+        technologies: ["Swift", "Charts/Graphs", "Gamification"],
+        snapshot : '/budgetmaster1.png'
+
       },
       {
         title: "AlumniConnect",
@@ -80,7 +85,8 @@ export const personalInfo = {
             "Integrated an AI matchmaking system (Python + TensorFlow/PyTorch) to analyze user skills and interests, providing personalized recommendations that boosted engagement."
         ],
           link: "#",
-        technologies: ["Flutter", "Next.js", "Tailwind CSS", "Python", "TensorFlow/PyTorch"]
+        technologies: ["Flutter", "Next.js", "Tailwind CSS", "Python", "TensorFlow/PyTorch"],
+        snapshot : '/alimuni.png'
       },
       {
         title: "Rent Car Management App",
@@ -118,7 +124,9 @@ export const personalInfo = {
             "Provided a clean, intuitive interface with calendar integration and push notifications to enhance user engagement"
           ],
         link: "#",
-        technologies: ["Flutter", "AI", "Gamification"]
+        technologies: ["Flutter", "AI", "Gamification"],
+        snapshot : '/studynow.png'
+
       },
       {
         title: "FitMe",
