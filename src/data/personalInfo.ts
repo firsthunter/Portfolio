@@ -41,9 +41,8 @@ export const personalInfo = {
         "Integrated machine learning models for audio data processing and built a user-friendly interface with SwiftUI/UIKit, ensuring seamless user interaction.",
         "Delivered a functional prototype that successfully detected hearing issues, demonstrating the potential to improve accessibility to hearing health diagnostics."
         ],
-          link: "#",
-        technologies: ["Swift", "Core ML", "SwiftUI/UIKit"],
-        snapshot : '/purehear.png'
+          link: "#",        technologies: ["Swift", "Core ML", "SwiftUI/UIKit"],
+        snapshot : '/images/purehear.png'
       },
       {
         title: "AgroAI",
@@ -57,7 +56,7 @@ export const personalInfo = {
         ],
           link: "#",
         technologies: ["Swift", "Kotlin", "MongoDB", "AR", "AI"],
-        snapshot : '/agroAi1.png'
+        snapshot : '/images/agroAi1.png'
 
       },
       {
@@ -68,11 +67,10 @@ export const personalInfo = {
     "Designed and developed a comprehensive iOS app using Swift to teach financial literacy through interactive lessons.",
     "Budgeting tools, and gamification (e.g., quizzes, simulations, and rewards).",
     "Integrated features like expense tracking, savings goal calculators, and debt management tools to help users manage personal finances effectively and make informed decisions.",
-    "Delivered a user-friendly platform with visualizations (charts/graphs) and community features (forums, expert advice) to enhance engagement and financial knowledge."
-],
+    "Delivered a user-friendly platform with visualizations (charts/graphs) and community features (forums, expert advice) to enhance engagement and financial knowledge."        ],
           link: "#",
         technologies: ["Swift", "Charts/Graphs", "Gamification"],
-        snapshot : '/budgetmaster1.png'
+        snapshot : '/images/budgetmaster1.png'
 
       },
       {
@@ -86,7 +84,7 @@ export const personalInfo = {
         ],
           link: "#",
         technologies: ["Flutter", "Next.js", "Tailwind CSS", "Python", "TensorFlow/PyTorch"],
-        snapshot : '/alimuni.png'
+        snapshot : '/images/alimuni.png'
       },
       {
         title: "Rent Car Management App",
@@ -121,11 +119,10 @@ export const personalInfo = {
           details : [
             "Designed and developed a cross-platform app using Flutter to help students organize study schedules, track progress, and receive AI-generated study tips.",
             "Leveraged AI algorithms to suggest optimal study times based on user productivity patterns and integrated gamification features like streaks and rewards.",
-            "Provided a clean, intuitive interface with calendar integration and push notifications to enhance user engagement"
-          ],
+            "Provided a clean, intuitive interface with calendar integration and push notifications to enhance user engagement"          ],
         link: "#",
         technologies: ["Flutter", "AI", "Gamification"],
-        snapshot : '/studynow.png'
+        snapshot : '/images/studynow.png'
 
       },
       {
